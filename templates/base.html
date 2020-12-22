@@ -1,0 +1,22 @@
+<!--
+  ~ Copyright (c) 2020.  Pierre
+  -->
+
+<!-- TODO Commenter -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="static/css/main.css">
+  <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+  <!--OU Jinja syntax <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css')}}">-->
+  {% block head %}
+  {% endblock %}
+
+</head>
+<body style="background:#E6E6FA;">
+{% block body %}
+{% endblock %}
+</body>
+</html>

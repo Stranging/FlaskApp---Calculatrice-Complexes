@@ -1,0 +1,79 @@
+<!--
+  ~ Copyright (c) 2020.  Pierre
+  -->
+<!-- TODO Commenter -->
+
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Calculatrice Complexes</title>
+{%endblock %}
+
+{% block body %}
+<h2 style="text-align:center;">Calculatrice - Nombres Complexes <span> - Flask & Python &copy; Stranging 2020</span>
+</h2>
+<hr/>
+<div class="container col col-md-6" style="background:#FFFACD;">
+  <hr/>
+  <form action="/calcul" method="post">
+    <div class="card card-body">
+      <h4 style="text-align:center; background:#ffe8cc; padding:5px;">Nombre Complexe 1</h4>
+      <div class="row">
+        <div class="col">
+          <span>Partie Réelle:</span> <input type="text" class="form-control" name="r1" id="r1">
+        </div>
+        <div class="col">
+          <span>Partie Imaginaire: </span><input type="text" class="form-control" name="i1" id="i1">
+        </div>
+      </div>
+    </div>
+    <hr/>
+    <div class="card card-body">
+      <h4 style="text-align:center; background:#ffe8cc; padding:5px;">Nombre Complexe 2</h4>
+      <div class="row">
+        <div class="col">
+          <span>Partie Réelle:</span> <input type="text" class="form-control" name="r2" id="r2">
+        </div>
+        <div class="col">
+          <span>Partie Imaginaire:</span> <input type="text" class="form-control" name="i2" id="i2">
+        </div>
+      </div>
+    </div>
+    <hr/>
+    <div style="text-align:center;">
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="radio" id="+" value="+" checked>
+        <label class="form-check-label" for="+">
+          Addition
+        </label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="radio" id="-" value="-">
+        <label class="form-check-label" for="-">
+          Soustraction
+        </label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="radio" id="*" value="*">
+        <label class="form-check-label" for="*">
+          Multiplication
+        </label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="radio" id="/" value="/">
+        <label class="form-check-label" for="/">
+          Division
+        </label>
+      </div>
+    </div>
+
+    <hr/>
+
+    <div class="card card-body">
+      <input class="btn btn-success" type="submit" value="Calculer">
+    </div>
+  </form>
+  <hr/>
+</div>
+
+{% endblock %}
